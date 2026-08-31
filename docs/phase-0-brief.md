@@ -10,12 +10,14 @@ This is the decision document for the 2026 rebuild. Style, tokens, homepage, and
 
 | Decision | Lock |
 | --- | --- |
-| Audience | Recruiters, hiring managers, and stakeholders at companies Wen has applied to |
-| Cases on first release | **Freckle Bakes** and **ZenZzz** only. Everything else is later. |
+| Primary audience | Recruiters, hiring managers, and stakeholders at companies Wen has applied to |
+| Secondary audience | Freelance clients. If a line helps a client but confuses a recruiter, the recruiter wins. |
+| Cases on first release | **ZenZzz** and **Freckle Bakes** only. Everything else is later. |
 | Design source | Apple Human Interface Guidelines, **tailored** — not a clone of apple.com or an iOS UI kit |
 | Existing system | None. We build tokens from HIG principles + our own voice |
 | Languages | English first; Traditional Chinese is in the system from Phase 1, wired up after the homepage |
 | Hosting | GitHub Pages now (`/2026-portfolio/`); custom domain at the end |
+| Figma MCP | Authenticated and ready for Phase 1 |
 
 ---
 
@@ -28,6 +30,7 @@ They are not browsing for inspiration. They are checking whether Wen can do the 
 | Recruiter | ~15 seconds | A job-shaped title, location, 2 relevant cases, no confusion |
 | Hiring manager | ~2 minutes | Process, decisions, what Wen owned vs the team |
 | Stakeholder (PM, eng, founder) | Skims one case | Evidence she can work with them, not only decorate screens |
+| Client (secondary) | Skims Freckle Bakes | Proof she can take a small business from problem to a live product |
 
 Implications we will not reopen later:
 
@@ -65,6 +68,8 @@ Reply with one of:
 ---
 
 ## Case plan for first release
+
+Homepage order (recommended): **Freckle Bakes**, then **ZenZzz**. Recruiters weight a live client product over coursework when both are written as decisions. If you prefer the process case first, say so — that is the only order question.
 
 ### 1. Freckle Bakes — lead case
 
@@ -127,7 +132,7 @@ COPD FHIR app, InsightHub, TNVR, and others. They can appear on a Work index or 
 - [ ] Confirm most applications are Product / UX design (not software engineering)
 - [ ] Freckle Bakes facts (list above)
 - [ ] ZenZzz facts (list above)
-- [ ] Authenticate Figma in Cursor before Phase 1
+- [x] Authenticate Figma in Cursor before Phase 1
 - [ ] Optional: 2–3 portfolio sites you respect (for homepage structure only — not for visual cloning)
 
 Phase 1 starts when the title is locked. Case facts can arrive in parallel; they block the case pages, not the design system.

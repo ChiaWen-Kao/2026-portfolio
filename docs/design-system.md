@@ -199,4 +199,4 @@ Wen approves before we draw the homepage:
 - [ ] Accent direction (quiet teal vs warm ink vs stay near systemBlue)
 - [ ] Hero type size: 48–56 display vs staying at Large Title 34
 - [ ] Light-first, dark as a complete token set
-- [ ] Figma authenticated in Cursor
+- [x] Figma authenticated in Cursor

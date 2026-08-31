@@ -1,6 +1,6 @@
 # 2026 Portfolio
 
-Rebuild of [chiawen-kao.github.io](https://chiawen-kao.github.io/) — a Product Designer portfolio for recruiters, hiring managers, and hiring-company stakeholders.
+Rebuild of [chiawen-kao.github.io](https://chiawen-kao.github.io/) — a Product Designer portfolio. Primary audience: recruiters, hiring managers, and hiring-company stakeholders. Secondary: freelance clients.
 
 ## Working in phases
 
