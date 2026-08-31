@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Hero direction for Wen Kao’s 2026 product design portfolio."
+    />
+    <title>Wen Kao — Product Designer</title>
+    <style>
+      :root {
+        --paper: #f3f1ea;
+        --ink: #191a18;
+        --muted: #656761;
+        --line: rgba(25, 26, 24, 0.18);
+        --accent: #d6573d;
+        --card: rgba(249, 248, 243, 0.92);
+        --gutter: clamp(1.25rem, 4vw, 4.5rem);
+        --radius: clamp(1.5rem, 3vw, 3rem);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        background: var(--paper);
+        color: var(--ink);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
+          sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      a,
+      button {
+        color: inherit;
+        font: inherit;
+      }
+
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      .hero-scroll {
+        min-height: 180svh;
+      }
+
+      .hero {
+        position: sticky;
+        top: 0;
+        min-height: 100svh;
+        overflow: hidden;
+        background: var(--paper);
+      }
+
+      .nav {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 5.25rem;
+        padding: 0 var(--gutter);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .wordmark {
+        font-size: 1rem;
+        font-weight: 650;
+        letter-spacing: -0.02em;
+        text-decoration: none;
+      }
+
+      .nav__right {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .status {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-right: 1.25rem;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .status::before {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: #43845f;
+        content: "";
+      }
+
+      .language {
+        min-width: 2.75rem;
+        min-height: 2.75rem;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+        cursor: pointer;
+      }
+
+      .language:hover {
+        background: rgba(25, 26, 24, 0.07);
+      }
+
+      .stage {
+        position: relative;
+        min-height: calc(100svh - 5.25rem);
+      }
+
+      .intro {
+        position: absolute;
+        z-index: 5;
+        left: var(--gutter);
+        bottom: clamp(2rem, 6vh, 5rem);
+        width: min(42rem, calc(100vw - var(--gutter) * 2));
+      }
+
+      h1 {
+        max-width: 9ch;
+        margin: 0;
+        font-size: clamp(3.6rem, 8.5vw, 8.8rem);
+        font-weight: 560;
+        letter-spacing: -0.075em;
+        line-height: 0.86;
+      }
+
+      .statement {
+        max-width: 32rem;
+        margin: 1.8rem 0 0;
+        font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+        letter-spacing: -0.02em;
+        line-height: 1.48;
+      }
+
+      .statement strong {
+        font-weight: 650;
+      }
+
+      .artwork {
+        --progress: 0;
+        position: absolute;
+        z-index: 1;
+        top: clamp(1.5rem, 6vh, 5rem);
+        right: var(--gutter);
+        width: clamp(22rem, 52vw, 58rem);
+        height: clamp(28rem, 68vh, 48rem);
+        overflow: hidden;
+        border-radius: var(--radius);
+        background:
+          radial-gradient(
+            circle at calc(80% - var(--progress) * 35%) 24%,
+            rgba(255, 226, 162, 0.92) 0 7%,
+            transparent 8%
+          ),
+          radial-gradient(
+            ellipse at 72% 77%,
+            rgba(17, 28, 51, 0.96) 0 16%,
+            transparent 16.5%
+          ),
+          radial-gradient(
+            ellipse at 36% 76%,
+            rgba(195, 64, 48, 0.94) 0 22%,
+            transparent 22.5%
+          ),
+          linear-gradient(145deg, #b7d5d4 0 35%, #e8bcb0 35% 63%, #d4523c 63%);
+        box-shadow: 0 1rem 4rem rgba(52, 48, 38, 0.12);
+        transform: translateY(calc(var(--progress) * -1.5rem))
+          scale(calc(1 + var(--progress) * 0.035));
+        transform-origin: center;
+      }
+
+      .artwork::before {
+        position: absolute;
+        inset: -25%;
+        background:
+          repeating-radial-gradient(
+            ellipse at 45% 60%,
+            transparent 0 1.8rem,
+            rgba(255, 249, 232, 0.52) 1.9rem 2rem
+          );
+        mix-blend-mode: soft-light;
+        opacity: 0.58;
+        transform: rotate(calc(-9deg + var(--progress) * 16deg));
+        content: "";
+      }
+
+      .artwork::after {
+        position: absolute;
+        inset: 0;
+        opacity: 0.12;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+        mix-blend-mode: multiply;
+        content: "";
+      }
+
+      .scroll-cue {
+        position: absolute;
+        z-index: 8;
+        right: var(--gutter);
+        bottom: 1.4rem;
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        color: var(--muted);
+        font-size: 0.76rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .scroll-cue::after {
+        width: 3.5rem;
+        height: 1px;
+        background: var(--muted);
+        transform: scaleX(calc(0.25 + var(--scroll-progress, 0) * 0.75));
+        transform-origin: left;
+        content: "";
+      }
+
+      .after {
+        min-height: 70svh;
+        padding: 6rem var(--gutter);
+        border-top: 1px solid var(--line);
+        background: #dedbd1;
+      }
+
+      .after p {
+        max-width: 28rem;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 900px) {
+        .status {
+          display: none;
+        }
+
+        .stage {
+          display: flex;
+          min-height: calc(100svh - 5.25rem);
+          flex-direction: column;
+          padding: 1rem var(--gutter) 2.5rem;
+        }
+
+        .artwork {
+          position: relative;
+          top: auto;
+          right: auto;
+          width: 100%;
+          height: min(48svh, 32rem);
+          order: 1;
+        }
+
+        .intro {
+          position: relative;
+          left: auto;
+          bottom: auto;
+          width: 100%;
+          margin-top: 2.4rem;
+          order: 2;
+        }
+
+        h1 {
+          max-width: none;
+          font-size: clamp(3.25rem, 14vw, 6rem);
+          line-height: 0.9;
+        }
+
+        .scroll-cue {
+          display: none;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .hero-scroll {
+          min-height: 150svh;
+        }
+
+        .statement {
+          margin-top: 1.3rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .artwork {
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero-scroll" aria-labelledby="hero-title">
+        <div class="hero">
+          <nav class="nav" aria-label="Primary navigation">
+            <a class="wordmark" href="#" aria-label="Wen Kao, home">Wen Kao</a>
+            <div class="nav__right">
+              <span class="status">Brisbane · Available</span>
+              <button class="language" type="button" aria-label="Switch to Traditional Chinese">
+                中
+              </button>
+            </div>
+          </nav>
+
+          <div class="stage">
+            <div class="artwork" role="img" aria-label="Abstract artwork in coral, blue and ink"></div>
+
+            <header class="intro">
+              <h1 id="hero-title">Product designer.</h1>
+              <p class="statement">
+                I design and ship digital products —
+                <strong>from research, through design, into development.</strong>
+              </p>
+            </header>
+
+            <div class="scroll-cue" aria-hidden="true">Enter the portfolio</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="after" aria-label="Prototype boundary">
+        <p>
+          Hero prototype ends here. This neutral wall only shows how the full-screen
+          opening could transition into the first case-study card.
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const root = document.documentElement;
+      const heroScroll = document.querySelector(".hero-scroll");
+      const artwork = document.querySelector(".artwork");
+      const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
+
+      function updateScroll() {
+        if (reduceMotion.matches) return;
+        const distance = heroScroll.offsetHeight - innerHeight;
+        const progress = Math.max(0, Math.min(1, scrollY / Math.max(distance, 1)));
+        artwork.style.setProperty("--progress", progress.toFixed(3));
+        root.style.setProperty("--scroll-progress", progress.toFixed(3));
+      }
+
+      addEventListener("scroll", updateScroll, { passive: true });
+      addEventListener("resize", updateScroll);
+      updateScroll();
+    </script>
+  </body>
+</html>
