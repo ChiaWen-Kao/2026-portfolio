@@ -225,41 +225,6 @@
         content: "";
       }
 
-      .label {
-        position: absolute;
-        z-index: 6;
-        top: clamp(3rem, 9vh, 7rem);
-        right: calc(var(--gutter) + clamp(1rem, 2vw, 2rem));
-        width: clamp(11rem, 17vw, 16rem);
-        padding: 1.1rem 1.2rem;
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 1.1rem;
-        background: var(--card);
-        backdrop-filter: blur(18px);
-        box-shadow: 0 0.5rem 2rem rgba(33, 31, 26, 0.1);
-      }
-
-      .label__index {
-        margin: 0 0 2.7rem;
-        color: var(--muted);
-        font-size: 0.72rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      .label__title {
-        margin: 0;
-        font-size: 0.93rem;
-        font-weight: 650;
-      }
-
-      .label__meta {
-        margin: 0.35rem 0 0;
-        color: var(--muted);
-        font-size: 0.8rem;
-        line-height: 1.45;
-      }
-
       .scroll-cue {
         position: absolute;
         z-index: 8;
@@ -319,11 +284,6 @@
           order: 1;
         }
 
-        .label {
-          top: 2rem;
-          right: calc(var(--gutter) + 1rem);
-        }
-
         .intro {
           position: relative;
           left: auto;
@@ -347,17 +307,6 @@
       @media (max-width: 520px) {
         .hero-scroll {
           min-height: 150svh;
-        }
-
-        .label {
-          top: 1.75rem;
-          right: calc(var(--gutter) + 0.75rem);
-          width: 10.5rem;
-          padding: 0.9rem;
-        }
-
-        .label__index {
-          margin-bottom: 1.6rem;
         }
 
         .statement {
@@ -392,12 +341,6 @@
 
           <div class="stage">
             <div class="artwork" role="img" aria-label="Abstract artwork in coral, blue and ink"></div>
-
-            <aside class="label" aria-label="Exhibition label">
-              <p class="label__index">Exhibit 00 · 2026</p>
-              <p class="label__title">Research → Design → Development</p>
-              <p class="label__meta">A product practice by Wen Kao</p>
-            </aside>
 
             <header class="intro">
               <p class="eyebrow">Product designer</p>
