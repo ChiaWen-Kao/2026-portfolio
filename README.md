@@ -19,4 +19,4 @@ React, likely Next.js, Tailwind — tokens from the design system, not ad-hoc ut
 
 ## Languages
 
-English first. Traditional Chinese is designed in from Phase 1.
+English and Traditional Chinese. Default follows the visitor’s location; a language switcher can override it.
