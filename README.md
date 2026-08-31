@@ -13,9 +13,20 @@ We do not ship the whole site in one pass. Each phase is a lock.
 | 2 Homepage | Figma, then HTML |
 | 3 Freckle Bakes + ZenZzz | HTML case studies |
 
-## Stack (later)
+## Stack
 
-React, likely Next.js, Tailwind — tokens from the design system, not ad-hoc utilities.
+Next.js (App Router) + TypeScript + Tailwind — tokens from the design system, not ad-hoc utilities. The design tokens in [docs/design-system.md](docs/design-system.md) are mirrored 1:1 as CSS custom properties in `app/globals.css`.
+
+## Local development
+
+```bash
+npm ci        # install dependencies
+npm run dev   # dev server at http://localhost:3000
+npm run build # static export to ./out (GitHub Pages)
+npm run lint  # eslint
+```
+
+The current homepage is a **Design System — Foundations** preview (colour roles, type scale, spacing, radius, CJK specimen) — a code-side reference, not the locked homepage. `next.config.ts` applies the `/2026-portfolio` basePath only for production builds, so GitHub Pages URLs resolve while `next dev` stays at `/`.
 
 ## Languages
 
